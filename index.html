@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <title>Главная</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/Assets/favicon.jpg">
+    <style>
+
+        .midContainer {
+            grid-row: 2;
+            width: 100%;
+            padding: 25px;
+
+            display: grid;
+            grid-template-columns: 275px 350px 975px;
+            grid-template-rows: 450px 175px;
+            gap: 25px;
+        }
+
+        .midLeftTop {
+            grid-column: span 2;
+            grid-row: 1;
+
+            border: 3px solid #a4b0be;
+            border-radius: 10px;
+
+            Padding: 5px;
+
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+            background-color: #dfe4ea;
+
+        }
+
+        .midLeftBottom {
+            grid-column: 2;
+            grid-row: 2;
+
+            border: 3px solid #a4b0be;
+            border-radius: 10px;
+
+            Padding: 5px;
+
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+            background-color: #dfe4ea;
+        }
+
+        .midRight {
+            grid-column: 3;
+            grid-row: span 2;
+
+            border: 3px solid #a4b0be;
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+            position: relative;
+            text-align: left;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .midContainer {
+                grid-row: 2;
+                padding: 5px;
+
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 350px;
+                grid-auto-rows: max-content;
+                gap: 5px;
+            }
+
+            .midLeftTop {
+                grid-column: 1;
+                grid-row: 2;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                background-color: #dfe4ea;
+
+            }
+
+            .midLeftTop p, .midLeftBottom p, .midLeftBottom ul li {
+                font-size: 16px;
+                margin: 0 0 5px 0;
+            }
+
+            
+
+            .midLeftBottom {
+                grid-column: 1;
+                grid-row: 3;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                background-color: #dfe4ea;
+            }
+
+            .midRight {
+                grid-column: 1;
+                grid-row: 1;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+                overflow: hidden;
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                position: relative;
+                text-align: left;
+            }
+
+        }
+
+        @media only screen and (max-width: 550px) {
+            .midContainer {
+                grid-template-rows: 325px;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .midContainer {
+                grid-template-rows: 300px;
+            }
+        }
+
+        @media only screen and (max-width: 475px) {
+            .midContainer {
+                grid-template-rows: 275px;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .midContainer {
+                grid-template-rows: 250px;
+            }
+        }
+
+        @media only screen and (max-width: 360px) {
+            .midContainer {
+                grid-template-rows: 225px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    
+
+    <div id="centeringContainer">
+        <div id="main">
+
+            <div class="topContainer">
+                <div class="topInfo">
+                    <a class="logo" href="./index.html">
+                        <div id="pedroContainer">
+                            <video autoplay muted loop id="pedro">
+                                <source src="/Assets/pedro.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </a>
+                    <div class="topInfoText">
+                        <p>Система адаптации студентов ИЭиУ первого курса УдГУ</p>
+                    </div>
+                </div>
+                <div class="topMenu">
+                    <a class="topMenuElement" href="./Guide.html">
+                        <p class="link">Путеводитель</p>
+                    </a>
+                    <a class="topMenuElement" href="./Cathedras.html">
+                        <p class="link">Кафедры</p>
+                    </a>
+                    <a class="topMenuElement" href="./Activities.html">
+                        <p class="link">Клубы</p>
+                    </a>
+                    <a class="topMenuElement" href="./Ecosystem.html">
+                        <p class="link">Сайты УдГУ</p>
+                    </a>
+                    <a class="topMenuElement" href="./General.html">
+                        <p class="link">Общее</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="midContainer">
+
+                <div class="midLeftTop">
+                    <p>Система разработана для помощи студентам первого курса Института экономики и управления
+                        Удмуртского государственного университета.</p>
+                    <p>Данная платформа предоставляет данные кадрового состава института, кружков университета, разбор
+                        пользования сайтами университета, общие данные для первокурсника.</p>
+                    <p>Сайт позволит тебе познакомиться с нашим вузом и институтом, активно влиться в студенческую
+                        жизнь.</p>
+                </div>
+                <!-- <div class="midLeftBottom">
+                    <p>Команда разработчиков:</p>
+                    <ul>
+                        <li>Копысова М. А.</li>
+                        <li>Малкова В. А.</li>
+                        <li>Ожегина Ю. А.</li>
+                    </ul>
+                </div> -->
+                <div class="midRight">
+                    <img src="./Assets/4building.jpg" height="100%" width="100%">
+                    <div class="overlay-text">
+                        <p>Удмуртский государственный университет</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bottomContainer">
+
+                <div class="bottomElement">
+                    <p>Marina Kopysova Team © 2024</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="ScalingNormalize.js"></script>
+</body>
+
+</html>

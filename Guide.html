@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путеводитель</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/Assets/favicon.jpg">
+    <script src="swiper.js"></script>
+    
+
+    <style>
+
+        .midContainer {
+            grid-row: 2;
+            width: 100%;
+            height: 725px;
+            /* padding: 25px; */
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .swiper {
+            padding: 25px;
+        }
+
+        .midSliderContainer {
+            width: 100%;
+            height: 100%;
+
+            display: grid;
+            grid-template-columns: 275px 350px 975px;
+            grid-template-rows: 250px 375px;
+            gap: 25px;
+        }
+
+        .midLeftTop {
+            grid-column: span 2;
+            grid-row: 1;
+
+            border: 3px solid #a4b0be;
+            border-radius: 10px;
+
+            Padding: 5px;
+
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+            background-color: #dfe4ea;
+
+        }
+
+        .midLeftBottom {
+            grid-column: span 2;
+            grid-row: 2;
+
+            border: 3px solid #a4b0be;
+            border-radius: 10px;
+
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+            background-color: #dfe4ea;
+
+            position:relative;
+            overflow:hidden;
+        }
+
+        .midRight {
+            grid-column: 3;
+            grid-row: span 2;
+
+            border: 3px solid #a4b0be;
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+            position: relative;
+            text-align: left;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .midContainer {
+                grid-row: 2;
+                width: 100%;
+                height: auto;
+                /* padding: 25px; */
+
+                display: flex;
+                justify-content: center;
+            }
+
+            .swiper {
+                padding: 5px;
+            }
+
+            .midSliderContainer {
+                width: 100%;
+                height: 100%;
+
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 375px auto 250px;
+                grid-auto-rows: max-content;
+                gap: 5px;
+            }
+
+            .midLeftTop {
+                grid-column: 1;
+                grid-row: 2;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+                Padding: 5px;
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                background-color: #dfe4ea;
+
+            }
+
+            .midLeftBottom {
+                grid-column: 1;
+                grid-row: 3;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                background-color: #dfe4ea;
+
+                position:relative;
+                overflow:hidden;
+            }
+
+            .midRight {
+                grid-column: 1;
+                grid-row: 1;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+                overflow: hidden;
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                position: relative;
+                text-align: left;
+            }
+            
+            .midDescription {
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+
+            .midDescription p {
+                text-align: center;
+            }
+
+        }
+
+        @media only screen and (max-width: 550px) {
+            .midSliderContainer {
+                grid-template-rows: 350px auto 250px;
+            }
+
+        }
+
+        @media only screen and (max-width: 500px) {
+            .midSliderContainer {
+                grid-template-rows: 325px auto 250px;
+            }
+        }
+
+        @media only screen and (max-width: 450px) {
+            .midSliderContainer {
+                grid-template-rows: 300px auto 250px;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .midSliderContainer {
+                grid-template-rows: 275px auto 250px;
+            }
+        }
+
+        @media only screen and (max-width: 350px) {
+            .midSliderContainer {
+                grid-template-rows: 250px auto 250px;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+
+    <div id="centeringContainer">
+        <div id="main">
+
+            <div class="topContainer">
+                <div class="topInfo">
+                    <a class="logo" href="./index.html">
+                        <div id="pedroContainer">
+                            <video autoplay muted loop id="pedro">
+                                <source src="/Assets/pedro.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </a>
+                    <div class="topInfoText">
+                        <p>Система адаптации студентов ИЭиУ первого курса УдГУ</p>
+                    </div>
+                </div>
+                <div class="topMenu">
+                    <a class="topMenuElement selected" href="./Guide.html">
+                        <p class="link">Путеводитель</p>
+                    </a>
+                    <a class="topMenuElement" href="./Cathedras.html">
+                        <p class="link">Кафедры</p>
+                    </a>
+                    <a class="topMenuElement" href="./Activities.html">
+                        <p class="link">Клубы</p>
+                    </a>
+                    <a class="topMenuElement" href="./Ecosystem.html">
+                        <p class="link">Сайты УдГУ</p>
+                    </a>
+                    <a class="topMenuElement" href="./General.html">
+                        <p class="link">Общее</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="midContainer">
+
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="midSliderContainer">
+                                <div class="midLeftTop">
+                                    <!-- <h3>Корпус 1</h3> -->
+                                        <p>В корпусе № 1 расположены Институт естественных наук, Естественнонаучный
+                                            музей УдГУ. В этом
+                                            корпусе
+                                            также размещаются административные подразделения, столовая, спортивный и
+                                            актовый залы.
+                                            Надземный переход соединяет учебные корпуса № 1 и 2.</p>
+                                </div>
+                                <div class="midLeftBottom">
+                                    <a
+                                            href="https://yandex.ru/maps/org/udgu_institut_yestestvennykh_nauk/1752857933/?utm_medium=mapframe&utm_source=maps"
+                                            style="color:#eee;font-size:12px;position:absolute;top:0px;">УДГУ, институт
+                                            естественных
+                                            наук</a><a
+                                            href="https://yandex.ru/maps/44/izhevsk/category/university/184106140/?utm_medium=mapframe&utm_source=maps"
+                                            style="color:#eee;font-size:12px;position:absolute;top:14px;">ВУЗ в
+                                            Ижевске</a><iframe
+                                            src="https://yandex.ru/map-widget/v1/?ll=53.225953%2C56.850705&mode=search&oid=1752857933&ol=biz&sctx=ZAAAAAgBEAAaKAoSCYwubw7XfENAEZv%2B7EeKhEZAEhIJ61OOyeL%2BwT8RxXWMKy6Owj8iBgABAgMEBSgKOABAwZ8NSAFqAnJ1nQHNzEw9oAEAqAEAvQGt28Q%2FwgE68YSk8UKNpuid%2FwXo0ongA8mXqvmEAerO3JkE6sHL6gOH18SRPJj%2BrJAYqff4qwaI6vS4Bo7VlauEA4ICF9GD0LTQs9GDINC60L7RgNC%2F0YPRgSAxigIAkgIAmgIMZGVza3RvcC1tYXBzqgIJODE0NzQxNDAzsAIB&sll=53.224234%2C56.849861&sspn=0.004832%2C0.007248&text=%D1%83%D0%B4%D0%B3%D1%83%20%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81%201&z=16.95"
+                                            frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                                </div>
+                                <div class="midRight">
+                                    <img src="./Assets/building1.jpg" height="100%" width="100%">
+                                    <div class="overlay-text">
+                                        <p>Корпус № 1</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="midSliderContainer">
+                                <div class="midLeftTop">
+                                    <!-- <h3>Корпус 2</h3> -->
+                                        <p>В учебном корпусе № 2 расположены: Институт удмуртской филологии,
+                                            финно-угроведения и
+                                            журналистики,
+                                            Институт языка и литературы, Институт истории и социологии. К корпусу
+                                            примыкает Комбинат
+                                            студенческого питания с большой столовой и буфетом.</p>
+                                </div>
+                                <div class="midLeftBottom">
+                                    <a
+                                            href="https://yandex.ru/maps/org/udmurtskiy_gosudarstvenny_universitet/17954308721/?utm_medium=mapframe&utm_source=maps"
+                                            style="color:#eee;font-size:12px;position:absolute;top:0px;">Удмуртский
+                                            государственный университет</a><a
+                                            href="https://yandex.ru/maps/44/izhevsk/category/university/184106140/?utm_medium=mapframe&utm_source=maps"
+                                            style="color:#eee;font-size:12px;position:absolute;top:14px;">ВУЗ в
+                                            Ижевске</a><iframe
+                                            src="https://yandex.ru/map-widget/v1/?ll=53.226354%2C56.850326&mode=search&oid=17954308721&ol=biz&sll=53.225684%2C56.850895&sspn=0.009397%2C0.003630&text=%D0%A3%D0%B4%D0%B3%D1%83%20%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81%202&z=16.89"
+                                            frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                                </div>
+                                <div class="midRight">
+                                    <img src="./Assets/building2.jpg" height="100%" width="100%">
+                                    <div class="overlay-text">
+                                        <p>Корпус № 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="midSliderContainer">
+                                <div class="midLeftTop">
+                                    <!-- <h3>Корпус 3</h3> -->
+                                        <p>В учебном корпусе № 3 располагаются кафедры музыкального искусства Института
+                                            искусств и
+                                            дизайна,
+                                            Института педагогики, психологии и социальных технологий, а также актовый
+                                            зал и буфет. Здесь
+                                            также
+                                            находится Учебно-научная студия «Дебютант».</p>
+                                </div>
+                                <div class="midLeftBottom">
+                                    <a
+                                            href="https://yandex.ru/maps/org/udmurtskiy_gosudarstvenny_universitet_uchebny_korpus_3/1796636327/?utm_medium=mapframe&utm_source=maps"
+                                            style="color:#eee;font-size:12px;position:absolute;top:0px;">Удмуртский
+                                            государственный университет, учебный корпус № 3</a><a
+                                            href="https://yandex.ru/maps/44/izhevsk/category/university/184106140/?utm_medium=mapframe&utm_source=maps"
+                                            style="color:#eee;font-size:12px;position:absolute;top:14px;">ВУЗ в
+                                            Ижевске</a><iframe
+                                            src="https://yandex.ru/map-widget/v1/?ll=53.228136%2C56.850326&mode=search&oid=1796636327&ol=biz&sll=53.226354%2C56.850326&sspn=0.019591%2C0.007569&text=%D0%A3%D0%B4%D0%B3%D1%83%20%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81%203&z=16.81"
+                                            frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                                </div>
+                                <div class="midRight">
+                                    <img src="./Assets/building3.jpg" height="100%" width="100%">
+                                    <div class="overlay-text">
+                                        <p>Корпус № 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="midSliderContainer">
+                                <div class="midLeftTop">
+                                    <!-- <h3>Корпус 4</h3> -->
+                                        <p>Учебный корпус № 4 занимают: Институт математики, информационных технологий и
+                                            физики,
+                                            Институт
+                                            права,
+                                            социального управления и безопасности, Институт экономики и управления,
+                                            Институт социальных
+                                            коммуникаций, Институт гражданской защиты.</p>
+                                </div>
+                                <div class="midLeftBottom">
+                                    <a
+                                            href="https://yandex.ru/maps/org/udgu_uchebny_korpus_4/1028841706/?utm_medium=mapframe&utm_source=maps"
+                                            style="color:#eee;font-size:12px;position:absolute;top:0px;">УДГУ, Учебный
+                                            корпус 4</a><a
+                                            href="https://yandex.ru/maps/44/izhevsk/category/university/184106140/?utm_medium=mapframe&utm_source=maps"
+                                            style="color:#eee;font-size:12px;position:absolute;top:14px;">ВУЗ в
+                                            Ижевске</a><iframe
+                                            src="https://yandex.ru/map-widget/v1/?ll=53.229564%2C56.850326&mode=search&oid=1028841706&ol=biz&sll=53.228136%2C56.850326&sspn=0.020709%2C0.008000&text=%D0%A3%D0%B4%D0%B3%D1%83%20%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81%204&z=16.66"
+                                            frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                                </div>
+                                <div class="midRight">
+                                    <img src="./Assets/building4.jpg" height="100%" width="100%">
+                                    <div class="overlay-text">
+                                        <p>Корпус № 4</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="midSliderContainer">
+                                <div class="midLeftTop">
+                                    <!-- <h3>Спортивный комплекс. Корпус 5</h3> -->
+                                        <p>В корпусе № 5 (Дворце спорта)
+                                            размещаются учебные аудитории Института физической культуры и спорта, три
+                                            спортивных зала,
+                                            тренажерный зал и плавательный бассейн, а также специализированный филиал
+                                            Научной библиотеки
+                                            УдГУ.
+                                        </p>
+                                </div>
+                                <div class="midLeftBottom">
+                                    <a
+                                            href="https://yandex.ru/maps/org/udgu_sportkompleks_uchebny_korpus_5/1127688042/?utm_medium=mapframe&utm_source=maps"
+                                            style="color:#eee;font-size:12px;position:absolute;top:0px;">УДГУ
+                                            Спорткомплекс, учебный корпус № 5</a><a
+                                            href="https://yandex.ru/maps/44/izhevsk/category/sports_center/184107313/?utm_medium=mapframe&utm_source=maps"
+                                            style="color:#eee;font-size:12px;position:absolute;top:14px;">Спортивный
+                                            комплекс в Ижевске</a><a
+                                            href="https://yandex.ru/maps/44/izhevsk/category/sports_hall_gym/41430094175/?utm_medium=mapframe&utm_source=maps"
+                                            style="color:#eee;font-size:12px;position:absolute;top:28px;">Спортивный,
+                                            тренажёрный зал в Ижевске</a><iframe
+                                            src="https://yandex.ru/map-widget/v1/?ll=53.229608%2C56.850391&mode=search&oid=1127688042&ol=biz&sll=53.229564%2C56.850326&sspn=0.022978%2C0.008877&text=%D0%A3%D0%B4%D0%B3%D1%83%20%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81%205&z=16.65"
+                                            frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                                </div>
+                                <div class="midRight">
+                                    <img src="./Assets/building5.jpg" height="100%" width="100%">
+                                    <div class="overlay-text">
+                                        <p>Корпус № 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="midSliderContainer">
+                                <div class="midLeftTop">
+                                    <!-- <h3>Корпус 6</h3> -->
+                                        <p>В учебном корпусе № 6
+                                            расположены Институт
+                                            педагогики, психологии и социальных технологий, Институт искусств и дизайна
+                                            и Институт
+                                            истории и
+                                            социологии. В корпусе есть столовая и буфет.</p>
+                                </div>
+                                <div class="midLeftBottom">
+                                    <a
+                                            href="https://yandex.ru/maps/org/udmurtskiy_gosudarstvenny_universitet/205952520973/?utm_medium=mapframe&utm_source=maps"
+                                            style="color:#eee;font-size:12px;position:absolute;top:0px;">Удмуртский
+                                            государственный университет</a><a
+                                            href="https://yandex.ru/maps/44/izhevsk/category/university/184106140/?utm_medium=mapframe&utm_source=maps"
+                                            style="color:#eee;font-size:12px;position:absolute;top:14px;">ВУЗ в
+                                            Ижевске</a><iframe
+                                            src="https://yandex.ru/map-widget/v1/?ll=53.227278%2C56.850013&mode=search&oid=205952520973&ol=biz&sll=53.229608%2C56.850391&sspn=0.023137%2C0.008939&text=%D0%A3%D0%B4%D0%B3%D1%83%20%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81%206&z=16.65"
+                                            frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                                </div>
+                                <div class="midRight">
+                                    <img src="./Assets/building6.jpg" height="100%" width="100%">
+                                    <div class="overlay-text">
+                                        <p>Корпус № 6</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="midSliderContainer">
+                                <div class="midLeftTop">
+                                    <!-- <h3>Корпус 7</h3> -->
+                                        <p>В корпусе № 7 разместился
+                                            созданный на
+                                            базе
+                                            нефтяного факультета Институт нефти и газа им. М.С. Гуцериева. Здесь
+                                            открыт
+                                            медпункт, который обслуживает студентов и сотрудников университета
+                                            (располагается на 1
+                                            этаже).
+                                        </p>
+                                </div>
+                                <div class="midLeftBottom">
+                                    <a
+                                            href="https://yandex.ru/maps/org/udgu_institut_nefti_i_gaza_imeni_m_s_gutseriyeva/1779228914/?utm_medium=mapframe&utm_source=maps"
+                                            style="color:#eee;font-size:12px;position:absolute;top:0px;">УДГУ, институт
+                                            нефти и газа имени М. С. Гуцериева</a><a
+                                            href="https://yandex.ru/maps/44/izhevsk/category/university/184106140/?utm_medium=mapframe&utm_source=maps"
+                                            style="color:#eee;font-size:12px;position:absolute;top:14px;">ВУЗ в
+                                            Ижевске</a><iframe
+                                            src="https://yandex.ru/map-widget/v1/?ll=53.229796%2C56.850013&mode=search&oid=1779228914&ol=biz&sll=53.227278%2C56.850013&sspn=0.023137%2C0.008939&text=%D0%A3%D0%B4%D0%B3%D1%83%20%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81%207&z=16.63"
+                                            frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                                </div>
+                                <div class="midRight">
+                                    <img src="./Assets/building7.jpg" height="100%" width="100%">
+                                    <div class="overlay-text">
+                                        <p>Корпус № 7</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="midSliderContainer">
+                                <div class="midLeftTop">
+                                    <!-- <h3>Корпус 7</h3> -->
+                                        <p>На рисунке изображено схематическое представление территории УдГУ, на котором отмечены другие полезные и развлекательные места.</p>
+                                </div>
+                                <div class="midLeftBottom">
+                                    <img src="./Assets/library.jpg" height="100%" width="100%">
+                                    <div class="overlay-text">
+                                        <p>Библиотека УдГУ</p>
+                                    </div>
+                                </div>
+                                <div class="midRight">
+                                    <img src="./Assets/generalmap.png" height="100%" width="100%">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <div class="midDescription">
+                <button onclick="swiper.slidePrev()">Назад</button>
+                <p>Для навигации делайте свайпы или используйте эти кнопки</p>
+                <button onclick="swiper.slideNext()">Вперёд</button>
+            </div>
+
+            <div class="bottomContainer">
+
+                <div class="bottomElement">
+                    <p>Marina Kopysova Team © 2024</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="ScalingNormalize.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+
+            direction: 'horizontal',
+            loop: true,
+            spaceBetween: 100,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            autoplay: {
+                delay: 15000,
+            },
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафедры</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/Assets/favicon.jpg">
+    <style>
+        .midContainer {
+            grid-row: 2;
+            width: 100%;
+            height: 650px;
+            padding: 25px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 25px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .midContainer {
+                padding: 5px;
+
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 205px 205px 205px;
+                gap: 5px;
+            }
+        }
+
+        @media only screen and (max-width: 430px) {
+            .midContainer {
+                padding: 5px;
+
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 165px 165px 165px;
+                gap: 5px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="centeringContainer">
+        <div id="main">
+
+            <div class="topContainer">
+                <div class="topInfo">
+                    <a class="logo" href="./index.html">
+                        <div id="pedroContainer">
+                            <video autoplay muted loop id="pedro">
+                                <source src="/Assets/pedro.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </a>
+                    <div class="topInfoText">
+                        <p>Система адаптации студентов ИЭиУ первого курса УдГУ</p>
+                    </div>
+                </div>
+                <div class="topMenu">
+                    <a class="topMenuElement" href="./Guide.html">
+                        <p class="link">Путеводитель</p>
+                    </a>
+                    <a class="topMenuElement selected" href="./Cathedras.html">
+                        <p class="link">Кафедры</p>
+                    </a>
+                    <a class="topMenuElement" href="./Activities.html">
+                        <p class="link">Клубы</p>
+                    </a>
+                    <a class="topMenuElement" href="./Ecosystem.html">
+                        <p class="link">Сайты УдГУ</p>
+                    </a>
+                    <a class="topMenuElement" href="./General.html">
+                        <p class="link">Общее</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="midContainer">
+
+                <div class="midContent parallax-container">
+                    <a class="midContentTextTop Content" href="./Cathedra1.html">Кафедра экономической теории и
+                        предпринимательства</a>
+                    <img class="midContentImageTop Content" src="/Assets/1.jpg">
+                </div>
+                <div class="midContent parallax-container">
+                    <a class="midContentTextBottom Content" href="./Cathedra3.html">Кафедра управления
+                        социально-экономическими системами</a>
+                     <img class="midContentImageBottom Content" src="/Assets/2.jpg">
+                </div>
+                <div class="midContent parallax-container">
+                    <a class="midContentTextTop Content" href="./Cathedra5.html">Кафедра экономики</a>
+                     <img class="midContentImageTop Content" src="/Assets/3.jpg">
+                </div>
+                <div class="midContent parallax-container">
+                    <a class="midContentTextBottom Content" href="./Cathedra4.html">Кафедра государственной службы и
+                        управления персоналом</a>
+                     <img class="midContentImageBottom Content" src="/Assets/4.jpg">
+                </div>
+                <div class="midContent parallax-container">
+                    <a class="midContentTextTop Content" href="./Cathedra2.html">Кафедра финансов и цифровой
+                        экономики</a>
+                     <img class="midContentImageTop Content" src="/Assets/5.jpg">
+                </div>
+
+            </div>
+
+            <div class="bottomContainer">
+
+                <div class="bottomElement">
+                    <p>Marina Kopysova Team © 2024</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="ScalingNormalize.js"></script>
+</body>
+
+</html>

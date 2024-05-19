@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Общее</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/Assets/favicon.jpg">
+    <style>
+        
+        .midContainer {
+            grid-row: 2;
+            width: 100%;
+            padding: 25px;
+
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto auto auto;
+            gap: 25px;
+        }
+
+        .midLeftTop {
+            grid-column: 1;
+            grid-row: 1;
+
+            border: 3px solid #a4b0be;
+            border-radius: 10px;
+
+            Padding: 5px;
+
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+            background-color: #dfe4ea;
+
+        }
+
+        .midRightTop {
+            grid-column: 2;
+            grid-row: 1;
+
+            border: 3px solid #a4b0be;
+            border-radius: 10px;
+
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+            background-color: #dfe4ea;
+        }
+
+        .midDouble {
+            grid-column: span 2;
+
+            border: 3px solid #a4b0be;
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+            background-color: #dfe4ea;
+            
+        }
+
+        @media only screen and (max-width: 600px) { 
+            .midContainer {
+                grid-row: 2;
+                width: 100%;
+                padding: 5px;
+
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto auto;
+                gap: 5px;
+            }
+
+            .midLeftTop {
+                grid-column: auto;
+                grid-row: auto;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+                Padding: 5px;
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                background-color: #dfe4ea;
+
+            }
+
+            .midRightTop {
+                grid-column: auto;
+                grid-row: auto;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                background-color: #dfe4ea;
+            }
+
+            .midDouble {
+                grid-column: auto;
+                grid-row: auto;
+
+                Padding: 5px;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+                overflow: hidden;
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                background-color: #dfe4ea;
+                
+            }
+
+            table.midDouble {
+                padding: 0;
+            }
+        } 
+
+        @media only screen and (max-width: 350px) { 
+            table.midDouble tbody tr td , table.midDouble tbody tr th {
+                padding: 1px;
+                font-size: 13px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div id="centeringContainer">
+        <div id="main">
+
+            <div class="topContainer">
+                <div class="topInfo">
+                    <a class="logo" href="./index.html">
+                        <div id="pedroContainer">
+                            <video autoplay muted loop id="pedro">
+                                <source src="/Assets/pedro.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </a>
+                    <div class="topInfoText">
+                        <p>Система адаптации студентов ИЭиУ первого курса УдГУ</p>
+                    </div>
+                </div>
+                <div class="topMenu">
+                    <a class="topMenuElement" href="./Guide.html">
+                        <p class="link">Путеводитель</p>
+                    </a>
+                    <a class="topMenuElement" href="./Cathedras.html">
+                        <p class="link">Кафедры</p>
+                    </a>
+                    <a class="topMenuElement" href="./Activities.html">
+                        <p class="link">Клубы</p>
+                    </a>
+                    <a class="topMenuElement" href="./Ecosystem.html">
+                        <p class="link">Сайты УдГУ</p>
+                    </a>
+                    <a class="topMenuElement selected" href="./General.html">
+                        <p class="link">Общее</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="midContainer">
+
+                <div class="midLeftTop">
+                    <p>Кратко об учебе и занятиях. В Университете реализуются образовательные программы высшего
+                        образования – программы бакалавриата (4 года), программы специалитета (5 лет), программы
+                        магистратуры (2 года).</p>
+                    <p>Организация учебного процесса. Учебное занятие в вузе длится 1,5 академических часа (два
+                        спаренных урока). Основными формами обучения в университете являются лекции, семинары и
+                        практикумы.</p>
+                </div>
+                <table class="midRightTop">
+                    <tr>
+                        <th colspan="2">Расписание занятий</th>
+                    </tr>
+                    <tr>
+                        <th>№</th>
+                        <th>Время</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>08:20-09:50</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>10:00-11:30</td>
+                    </tr>
+                    <tr>
+                        <th>Обед</th>
+                        <th>11:30-12:10</th>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>12:10-13:40</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>13:50-15:20</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>15:30-17:00</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>17:20-18:50</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>19:00-20:30</td>
+                    </tr>
+                </table>
+
+                <div class="midDouble"> <p>Студенты объединяются в учебные коллективы, которые называются не классы, а курсы,
+                    потоки и учебные
+                    группы. Курс – год твоего обучения. Поток – студенты твоего курса. Группа – учебные коллективы по
+                    специальности и направлению. Запомни номер своей группы! Это позволит тебе сориентироваться в
+                    расписании пар. Всю информацию по учебному процессу ты сможешь узнавать у старосты группы (человек,
+                    которого выбрала твоя группа, чтобы он предоставлял свою группу перед дирекцией и решал
+                    организационные вопросы). </p></div>
+
+                <div class="midDouble">
+                    <p>Семестр и балльно-рейтинговая система.</p>
+                    <p>Семестр (время твоего обучения) обычно длится учебные полгода. Семестр состоит из 2 рубежей.
+                        Сессия –
+                        время экзаменов.</p>
+                    <p>Балльно-рейтинговая система (БРС) – основана на суммировании баллов, полученных обучающимся по
+                        всем
+                        видам работ. БРС по каждой дисциплине в течение семестра предусматривает наличие текущего,
+                        рубежного
+                        контроля успеваемости и промежуточной аттестации.</p>
+                    <p>Максимальное количество баллов за семестр – 60. За рубеж – 30 баллов. Остальные баллы ты можешь
+                        получить на экзамене.</p>
+                    <p>Данная таблица итоговых баллов носит обобщенный характер. Таблица оценивания может различаться
+                        (каждый преподаватель может изменить ее для своего предмета).</p>
+                </div>
+                <table class="midDouble">
+                    <tr>
+                        <th>Баллы</th>
+                        <th>Полная запись</th>
+                        <th>Сокращенная запись</th>
+                    </tr>
+                    <tr>
+                        <td>88-100</td>
+                        <td>Отлично</td>
+                        <td>отл.</td>
+                    </tr>
+                    <tr>
+                        <td>74-87</td>
+                        <td>Хорошо</td>
+                        <td>хор.</td>
+                    </tr>
+                    <tr>
+                        <td>61-73</td>
+                        <td>Удовлетворительно</td>
+                        <td>удовл.</td>
+                    </tr>
+                    <tr>
+                        <td>0-60</td>
+                        <td>Неудовлетворительно </td>
+                        <td>неуд.</td>
+                    </tr>
+                    <tr>
+                        <td>61-100</td>
+                        <td colspan="2">зачтено</td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="bottomContainer">
+
+                <div class="bottomElement">
+                    <p>Marina Kopysova Team © 2024</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="ScalingNormalize.js"></script>
+</body>
+
+</html>
